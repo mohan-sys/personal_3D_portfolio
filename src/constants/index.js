@@ -91,46 +91,46 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "ReactJS",
-    imgPath: "/images/logos/react.png",
-  },
-  {
     name: "Python",
     imgPath: "/images/logos/python.svg",
   },
   {
-    name: "Backend NodeJS",
+    name: "Spring Boot",
+    imgPath: "/images/logos/spring-boot.png",
+  },
+  {
+    name: "React.js",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Node.js",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Machine Learning",
-    imgPath: "/images/logos/git.svg",
+    name: "SQL",
+    imgPath: "/images/logos/sql.png",
   },
 ];
 
 const techStackImgs2 = [
   {
-    name: "Spring Boot",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "JUnit5",
-    imgPath: "/images/logos/python.svg",
+    name: "Data Pipelines",
+    imgPath: "/images/logos/data-pipelines.png",
   },
   {
     name: "Docker",
-    imgPath: "/images/logos/node.png",
+    imgPath: "/images/logos/docker.png",
   },
   {
-    name: "AWS",
-    imgPath: "/images/logos/three.png",
+    name: "GCP",
+    imgPath: "/images/logos/google-cloud.png",
   },
   {
     name: "Kafka",
+    imgPath: "/images/logos/three.png",
+  },
+  {
+    name: "JUnit5",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -173,21 +173,19 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    techStacks: ["Python", "SQL", "Apache Spark", "GCP"],
+    
     logoPath: "/images/logo1.png",
-    title: "Software Developer Intern",
-    date: "February 2023 - July 2023",
+    title: "Data Engineering Intern",
+    date: "September 2025 - Present",
     responsibilities: [
-      "Improved UI responsiveness by 30% across HR software modules through optimized React state management and lazy loading.",
-      "Resolved 100+ client issues via Jira, cutting resolution time by 25% and raising satisfaction to 95%.",
-      "Built scalable payroll solutions with React, Node.js, and RESTful APIs, reducing onboarding time for enterprise clients by 20%",
+      "Built and optimized ETL pipelines with Python, SQL, and Apache Spark, improving data ingestion speed and scalability.",
+      "Deployed GCP cloud solutions, reducing latency by 20% and boosting system resilience.",
+      "Delivered ML-ready datasets with data scientists, accelerating model training and business insights.",
     ],
   },
   {
-    review:
-      "ADP is a global leader in human capital management solutions, serving over 1 million clients worldwide.",
+    techStacks: ["React", "Node.js", "REST APIs", "Jira"],
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "Software Developer Intern",
@@ -199,8 +197,7 @@ const expCards = [
     ],
   },
   {
-    review:
-      "Zoho is a SaaS company providing 55+ enterprise software products, trusted by 100M+ global users.",
+    techStacks: ["Node.js", "Express.js", "Git"],
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     title: "Software Developer Intern",

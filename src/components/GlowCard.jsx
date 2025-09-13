@@ -27,23 +27,32 @@ const GlowCard = ({ card, index, children }) => {
 
   // return the card component with the mouse move event
   return (
-    <div
-      ref={(el) => (cardRefs.current[index] = el)}
-      onMouseMove={handleMouseMove(index)}
-      className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
-    >
-      <div className="glow"></div>
-      <div className="flex items-center gap-1 mb-5">
-        {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src="/images/star.png" alt="star" className="size-5" />
+  <div
+    ref={(el) => (cardRefs.current[index] = el)}
+    onMouseMove={handleMouseMove(index)}
+    className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column relative"
+  >
+    <div className="glow"></div>
+
+      {/* Tech stacks prominently */}
+      <div className="flex flex-wrap gap-3 ">
+        {card.techStacks?.map((stack, i) => (
+          <span
+            key={i}
+            className="px-4 py-2 bg-white/10 text-white text-base font-semibold rounded-lg"
+          >
+            {stack}
+          </span>
         ))}
-      </div>
-      <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
-      </div>
-      {children}
     </div>
-  );
+    
+
+    {/* Any extra content can go here if you ever pass children again */}
+    {children}
+
+    
+  </div>
+);
 };
 
 export default GlowCard;
