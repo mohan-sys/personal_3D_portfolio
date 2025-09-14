@@ -1,7 +1,11 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
+  },
+  {
+    name: "Education",
+    link: "#education",
   },
   {
     name: "Experience",
@@ -10,10 +14,6 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -208,6 +208,36 @@ const expCards = [
       "Built RESTful APIs with Node.js and Express.js, accelerating feature rollout and improving client onboarding.",
     ],
   },
+];
+
+export const eduCards = [
+  {
+    university: "University of Strathclyde",
+    degree: "MSc in Advanced Computer Science",
+    date: "Jauary 2024 - Janurary 2025",
+    grade: "First Class with Distinction",
+    logoPath: "/images/logos/uni-strathclyde.jpeg",
+    coursework: [
+      "Distributed Information System",
+      "Designing Usable Systems",
+      "Deep Neural Network",
+      "Machine Learning",
+    ],
+  },
+  {
+    university: "Anna University, St. Joseph's College of Engineering",
+    degree: "B.E. in Computer Science and Engineering",
+    date: "August 2019 - May 2023",
+    grade: "First Class",
+    logoPath: "/images/logos/anna-university.jpg",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "Operating Systems",
+      "Cloud Computing",
+    ],
+  },
+  
 ];
 
 const expLogos = [
