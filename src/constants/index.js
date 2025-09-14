@@ -311,7 +311,7 @@ const socialImgs = [
   {
     name: "github",
     url: "https://www.github.com/mohan-sys",
-    imgPath: "/images/x.png",
+    imgPath: "/images/github-invert.png",
   },
 ];
 
