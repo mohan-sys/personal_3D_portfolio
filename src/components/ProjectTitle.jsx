@@ -1,12 +1,12 @@
 // ProjectTitle.jsx
 const ProjectTitle = ({
   title = "Projects",
-  sub = "🎓 Some of my work",
+  sub = "👨‍💻 Some of my work",
   className = "",
 }) => {
   return (
     
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 pt-[150px]">
         <div className="hero-badge">
             <p>{sub}</p>
         </div>

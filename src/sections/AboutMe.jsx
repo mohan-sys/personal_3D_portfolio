@@ -5,9 +5,9 @@ const AboutMe = ({ sectionRef }) => {
     <section
       id="aboutme"
       ref={sectionRef}
-      className="relative md:min-h-screen min-h-[120vh] md:px-20 px-5 py-16 bg-black"
+      className="relative md:px-20 px-5 py-16 bg-black"
     >
-      <div className="max-w-4xl">
+      <div className="max-w-4xl lg:max-w-5xl">
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">About Me</h2>
 
         <p className="about-text text-white/80 md:text-xl leading-relaxed mb-6">

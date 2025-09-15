@@ -1,5 +1,9 @@
 const navLinks = [
   {
+    name: "Experience",
+    link: "#experience",
+  },
+  {
     name: "Projects",
     link: "#work",
   },
@@ -7,10 +11,7 @@ const navLinks = [
     name: "Education",
     link: "#education",
   },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
+  
   {
     name: "Skills",
     link: "#skills",
@@ -213,7 +214,7 @@ const expCards = [
 export const eduCards = [
   {
     university: "University of Strathclyde",
-    degree: "MSc in Advanced Computer Science",
+    degree: "MSc. in Advanced Computer Science",
     date: "Jauary 2024 - Janurary 2025",
     grade: "First Class with Distinction",
     logoPath: "/images/logos/uni-strathclyde.jpeg",
@@ -315,6 +316,103 @@ const socialImgs = [
   },
 ];
 
+// constants/index.js
+
+const SKILL_TABS = [
+  {
+    key: "languages",
+    title: "Languages & Core Technologies",
+    items: [
+      "Python",
+      "Java",
+      "JavaScript",
+      "SQL",
+      "Kotlin",
+      "REST API",
+    ],
+  },
+  {
+    key: "frameworks",
+    title: "Frameworks & Libraries",
+    items: [
+      "React.js",
+      "Node.js",
+      "Spring Boot",
+      "Apache Spark",
+      "Express.js",
+      "JUnit 5",
+      "Apache Airflow",
+    ],
+  },
+  {
+    key: "cloud",
+    title: "Cloud & DevOps Tools",
+    items: [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Git",
+      "CI/CD",
+      "Jira",
+      "Kafka",
+    ],
+  },
+  {
+    key: "databases",
+    title: "Databases & Data Engineering Practices",
+    items: [
+      "MySQL",
+      "MongoDB",
+      "BigQuery",
+      "RESTful API Design",
+      "Agile/Scrum",
+      "Test-Driven Development",
+      "ETL Pipelines",
+    ],
+  },
+];
+
+const SKILL_ICONS = {
+  // Languages
+  Python: "/images/logos/python.svg",
+  Java: "/images/logos/java.png",
+  JavaScript: "/images/logos/javascript.png",
+  SQL: "/images/logos/sql.png",
+  Kotlin: "/images/logos/kotlin.png",
+  "REST API": "/images/logos/api.png",
+
+  // Frameworks
+  "React.js": "/images/logos/react.png",
+  "Node.js": "/images/logos/node.png",
+  "Spring Boot": "/images/logos/spring-boot.png",
+  "Apache Spark": "/images/logos/spark.png",
+  "Express.js": "/images/logos/express.png",
+  "JUnit 5": "/images/logos/junit.png",
+  "Apache Airflow": "/images/logos/airflow.png",
+
+  // Cloud & DevOps
+  Docker: "/images/logos/docker.png",
+  Kubernetes: "/images/logos/kubernetes.png",
+  AWS: "/images/logos/aws.png",
+  GCP: "/images/logos/google-cloud.png",
+  Git: "/images/logos/git.svg",
+  "CI/CD": "/images/logos/ci-cd.png",
+  Jira: "/images/logos/jira.png",
+  Kafka: "/images/logos/kafka.png",
+
+  // Databases & Practices
+  MySQL: "/images/logos/mysql.png",
+  MongoDB: "/images/logos/mongodb.png",
+  BigQuery: "/images/logos/bigquery.png",
+  "RESTful API Design": "/images/logos/api.png",
+  "Agile/Scrum": "/images/logos/agile.png",
+  "Test-Driven Development": "/images/logos/tdd.png",
+  "ETL Pipelines": "/images/logos/etl.png",
+};
+
+
+
 export {
   words,
   abilities,
@@ -328,4 +426,6 @@ export {
   techStackImgs,
   techStackImgs2,
   navLinks,
+   SKILL_TABS,
+   SKILL_ICONS,
 };

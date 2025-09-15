@@ -1,111 +1,61 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
+// src/sections/TechStack.jsx
 import TitleHeader from "../components/TitleHeader";
-import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
-// import { techStackIcons } from "../constants";
- import { techStackImgs } from "../constants";
-  import { techStackImgs2 } from "../constants";
+import { SKILL_TABS as SKILL_SECTIONS, SKILL_ICONS } from "../constants";
+
+// Reuse the same card style as Education
+const Card = ({ children }) => (
+  <div className="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-8 shadow-lg transition-transform duration-200 hover:scale-[1.01]">
+    {children}
+  </div>
+);
 
 const TechStack = () => {
-  // Animate the tech cards in the skills section
-  useGSAP(() => {
-    // This animation is triggered when the user scrolls to the #skills wrapper
-    // The animation starts when the top of the wrapper is at the center of the screen
-    // The animation is staggered, meaning each card will animate in sequence
-    // The animation ease is set to "power2.inOut", which is a slow-in fast-out ease
-    gsap.fromTo(
-      ".tech-card",
-      {
-        // Initial values
-        y: 50, // Move the cards down by 50px
-        opacity: 0, // Set the opacity to 0
-      },
-      {
-        // Final values
-        y: 0, // Move the cards back to the top
-        opacity: 1, // Set the opacity to 1
-        duration: 1, // Duration of the animation
-        ease: "power2.inOut", // Ease of the animation
-        stagger: 0.2, // Stagger the animation by 0.2 seconds
-        scrollTrigger: {
-          trigger: "#skills", // Trigger the animation when the user scrolls to the #skills wrapper
-          start: "top center", // Start the animation when the top of the wrapper is at the center of the screen
-        },
-      }
-    );
-  });
-
   return (
-    <div id="skills" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+    <section id="skills" className="flex-center section-padding xl:px-0">
+      <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
           title="How I Can Contribute & My Key Skills"
           sub="🤝 What I Bring to the Table"
         />
-        
-          {/* Loop through the techStackIcons array and create a component for each item. 
-              The key is set to the name of the tech stack icon, and the classnames are set to 
-              card-border, tech-card, overflow-hidden, and group. The xl:rounded-full and rounded-lg 
-              classes are only applied on larger screens. */}
-        {/* {techStackIcons.map((techStackIcon) => (
-          <div
-            key={techStackIcon.name}
-            className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-          >
-            <div className="tech-card-animated-bg" />
-            <div className="tech-card-content">
-              <div className="tech-icon-wrapper">
-                <TechIconCardExperience model={techStackIcon} />
-              </div>
-              <div className="padding-x w-full">
-                <p>{techStackIcon.name}</p>
-              </div>
-            </div>
-          </div>
-        ))} */}
 
-          {/* This is for the img part */}
-          <div className="tech-grid">
-          {techStackImgs.map((techStackIcon, index) => (
-            <div
-              key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-            >
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
-                </div>
-                <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
-                </div>
+        {/* 4 boxes → 2×2 grid on md+ */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          {SKILL_SECTIONS.map((section) => (
+            <Card key={section.key}>
+              {/* Header */}
+              <div>
+                <h2 className="text-2xl font-bold">{section.title}</h2>
               </div>
-            </div>
-          ))} 
-          
-        </div>
-        <div className="tech-grid">
-          {techStackImgs2.map((techStackIcon, index) => (
-            <div
-              key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-            >
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
-                </div>
-                <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
-                </div>
+
+              {/* Skills grid inside each box */}
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+                {section.items.map((name) => {
+                  const src = SKILL_ICONS[name];
+                  if (!src) return null;
+                  return (
+                    <div
+                      key={`${section.key}-${name}`}
+                      className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-3 py-2 md:px-4 md:py-3 transition-colors duration-200 hover:bg-white/10"
+                      title={name}
+                    >
+                      <img
+                        src={src}
+                        alt={name}
+                        loading="lazy"
+                        className="h-6 w-6 md:h-7 md:w-7 object-contain"
+                      />
+                      <span className="text-sm md:text-base text-white/90">
+                        {name}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
-            </div>
-          ))} 
-          
+            </Card>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -194,7 +194,7 @@ const AppShowcase = () => {
               src="/images/project1.png"
               alt="Ryde App Interface"
               description="Real-time collaborative crossword game with seamless cross-device play."
-              github="https://github.com/yourname/multiplayer-crossword"
+              github="https://github.com/mohan-sys/mohans_crossword"
             />
             <div className="text-content">
               <h2>Multiplayer Crossword Web-app</h2>
@@ -209,12 +209,12 @@ const AppShowcase = () => {
             <div className="project" ref={libraryRef}>
               <HoverImageOverlay
                 src="/images/project2.png"
-                alt="Kotlin Calorie Tracker"
-                description="Kotlin Android app for meal logging, macros, and daily targets."
-                github="https://github.com/yourname/kotlin-calorie-tracker"
+                alt="ETL pipeline on GCP"
+                description="ETL orchestration with monitoring in Cloud Composer."
+                github="https://github.com/mohan-sys/storypoints-data-pipeline"
                 wrapperBg="#FFEFDB"
               />
-              <h2>Kotlin based Calorie Tracker</h2>
+              <h2>End-to-End Data Engineering Pipeline with Orchestration on GCP</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
@@ -222,7 +222,7 @@ const AppShowcase = () => {
                 src="/images/project3.png"
                 alt="Mental Health Prediction"
                 description="NLP pipeline analyzing Reddit posts for mental-health signals."
-                github="https://github.com/yourname/reddit-mental-health-nlp"
+                github="https://colab.research.google.com/drive/1ziYUugVrgV7XygbnD9OxHBJjPvG5a03Y?usp=sharing"
                 wrapperBg="#FFE7EB"
               />
               <h2>Mental Health Prediction from Reddit Posts</h2>

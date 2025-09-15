@@ -1,6 +1,3 @@
-// src/sections/Hero.jsx
-import AnimatedCounter from '../components/AnimatedCounter';
-// ❌ remove: import HeroExperince from '../components/HeroModels/HeroExperince';
 import { words } from '../constants';
 import Button from '/src/components/Button.jsx';
 import { useGSAP } from '@gsap/react';
@@ -55,11 +52,11 @@ const Hero = () => {
           </div>
         </header>
 
-        {/* ✅ Your photo replaces the 3D model. Keep this className: hero-photo */}
+      
         <figure>
           <div className="hero-photo md:h-[80vh] h-[60vh] w-full flex items-center justify-center">
             <img
-              src="public/images/mohan-portrait.png"          // put your image in /public/images/me.jpg
+              src="/images/mohan.png"          
               alt="Mohan portrait"
               className="max-h-full object-cover rounded-2xl shadow-lg"
               style={{ aspectRatio: '1 / 1' }}

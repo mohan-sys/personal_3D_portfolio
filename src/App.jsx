@@ -11,21 +11,27 @@ import Footer from './sections/Footer'
 import EducationSection from './sections/EducationSection'
 import AboutMe from './sections/AboutMe'
 import ProjectTitle from './components/ProjectTitle'
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 const App = () => {
   return (
     <> 
+      <Analytics />
         <NavBar />
         <Hero />
         <AboutMe />
+
+        <ExperienceSection />
+
         <ProjectTitle />
         <ShowcaseSection />
-        <LogoSection />
+        
+        
+        {/* <LogoSection /> */}
         <FeatureCards />
         <EducationSection />
-        <ExperienceSection />
+        
         <TechStack />
         <Contact />
         <Footer />
