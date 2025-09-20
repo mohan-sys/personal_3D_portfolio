@@ -198,7 +198,7 @@ const expCards = [
     ],
   },
   {
-    techStacks: ["Node.js", "Express.js", "Git"],
+    techStacks: ["OOP","Node.js", "Express.js", "Git"],
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     title: "Software Developer Intern",
