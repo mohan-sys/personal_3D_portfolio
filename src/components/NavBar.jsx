@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import { navLinks } from "../constants";
 
@@ -22,10 +22,36 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollWithOffset = useCallback((selector) => {
+    if (!selector) return;
+
+    const target = document.querySelector(selector);
+    if (!target) return;
+
+    const navbar = document.querySelector(".navbar");
+    const headerOffset = (navbar?.offsetHeight || 0) + 20;
+    const elementPosition =
+      target.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: elementPosition - headerOffset,
+      behavior: "smooth",
+    });
+  }, []);
+
+  const handleNavClick = (e, selector) => {
+    e.preventDefault();
+    scrollWithOffset(selector);
+  };
+
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <a href="#hero" className="logo">
+        <a
+          href="#hero"
+          className="logo"
+          onClick={(e) => handleNavClick(e, "#hero")}
+        >
           Mohan Raj Loganathan
         </a>
 
@@ -33,7 +59,7 @@ const NavBar = () => {
           <ul>
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
-                <a href={link}>
+                <a href={link} onClick={(e) => handleNavClick(e, link)}>
                   <span>{name}</span>
                   <span className="underline" />
                 </a>
@@ -42,7 +68,11 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
+        <a
+          href="#contact"
+          className="contact-btn group"
+          onClick={(e) => handleNavClick(e, "#contact")}
+        >
           <div className="inner">
             <span>Contact me</span>
           </div>

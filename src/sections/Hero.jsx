@@ -48,7 +48,12 @@ const Hero = () => {
               Let's collaborate to bring your vision to life!
             </p>
 
-            <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my work" />
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See my work"
+              targetId="experience"
+            />
           </div>
         </header>
 

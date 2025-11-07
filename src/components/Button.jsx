@@ -1,32 +1,27 @@
 /**
  * A reusable CTA button component.
- * When clicked, it scrolls smoothly to the section with ID "counter",
- * with a small offset from the top for better visual placement.
+ * Scrolls smoothly to a section identified by `targetId`
+ * so it can be reused for multiple destinations (hero, contact, etc).
  */
+const Button = ({ text, className, id, targetId = "counter" }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
 
-const Button = ({ text, className, id }) => {
+    if (!targetId) return;
+
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      const offset = window.innerHeight * 0.15;
+      const top =
+        target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
-    <a
-      onClick={(e) => {
-        e.preventDefault(); // Stop the link from jumping instantly
-
-        const target = document.getElementById("counter"); // Find the section with ID "counter"
-
-        // Only scroll if we found the section and an ID is passed in
-        // taht prevents the contact button from scrolling to the top
-        if (target && id) {
-          const offset = window.innerHeight * 0.15; // Leave a bit of space at the top
-
-          // Calculate how far down the page we need to scroll
-          const top =
-            target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-          // Scroll smoothly to that position
-          window.scrollTo({ top, behavior: "smooth" });
-        }
-      }}
-      className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
-    >
+    <a onClick={handleClick} className={`${className ?? ""} cta-wrapper`} id={id}>
       <div className="cta-button group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
