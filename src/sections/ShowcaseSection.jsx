@@ -185,53 +185,55 @@ const AppShowcase = () => {
   }, []);
 
   return (
-    <div id="work" ref={sectionRef} className="app-showcase pt-[40px] mt-0">
-      <div className="w-full">
-        <div className="showcaselayout">
-          {/* FEATURED */}
-          <div ref={rydeRef} className="first-project-wrapper">
+  <div id="work" ref={sectionRef} className="app-showcase pt-[40px] mt-0">
+    <div className="w-full">
+      <div className="showcaselayout">
+        {/* FEATURED (Project 1) */}
+        <div ref={rydeRef} className="first-project-wrapper">
+          <HoverImageOverlay
+            src="/images/project3.png" // placeholder for now; replace later
+            alt="Incident Management Platform Dashboard"
+            description="Serverless incident management platform with alert ingestion, async processing, incident lifecycle, and MTTA/MTTR metrics dashboard."
+            github="https://github.com/mohan-sys/incident-platform"
+          />
+          <div className="text-content">
+            <h2>Incident Management Platform (AWS Serverless)</h2>
+            <p className="text-white-50 md:text-xl">
+              Built with AWS Lambda, API Gateway, DynamoDB, SQS, SNS, and a React dashboard deployed on Vercel.
+            </p>
+          </div>
+        </div>
+
+        {/* GRID (Projects 2 & 3) */}
+        <div className="project-list-wrapper overflow-hidden">
+          {/* Project 2 */}
+          <div className="project" ref={libraryRef}>
             <HoverImageOverlay
-              src="/images/project1.png"
-              alt="Ryde App Interface"
-              description="Real-time collaborative crossword game with seamless cross-device play."
-              github="https://github.com/mohan-sys/mohans_crossword"
+              src="/images/project2.png"
+              alt="ETL pipeline on GCP"
+              description="End-to-end ETL pipeline with orchestration and monitoring using Cloud Composer and BigQuery."
+              github="https://github.com/mohan-sys/storypoints-data-pipeline"
+              wrapperBg="#FFEFDB"
             />
-            <div className="text-content">
-              <h2>Multiplayer Crossword Web-app</h2>
-              <p className="text-white-50 md:text-xl">
-                Built using React.js, Node.js, Express.js, WebSockets, and deployed on Vercel with CI/CD.
-              </p>
-            </div>
+            <h2>End-to-End Data Engineering Pipeline with Orchestration on GCP</h2>
           </div>
 
-          {/* GRID */}
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <HoverImageOverlay
-                src="/images/project2.png"
-                alt="ETL pipeline on GCP"
-                description="ETL orchestration with monitoring in Cloud Composer."
-                github="https://github.com/mohan-sys/storypoints-data-pipeline"
-                wrapperBg="#FFEFDB"
-              />
-              <h2>End-to-End Data Engineering Pipeline with Orchestration on GCP</h2>
-            </div>
-
-            <div className="project" ref={ycDirectoryRef}>
-              <HoverImageOverlay
-                src="/images/project3.png"
-                alt="Mental Health Prediction"
-                description="NLP pipeline analyzing Reddit posts for mental-health signals."
-                github="https://colab.research.google.com/drive/1ziYUugVrgV7XygbnD9OxHBJjPvG5a03Y?usp=sharing"
-                wrapperBg="#FFE7EB"
-              />
-              <h2>Mental Health Prediction from Reddit Posts</h2>
-            </div>
+          {/* Project 3 */}
+          <div className="project" ref={ycDirectoryRef}>
+            <HoverImageOverlay
+              src="/images/project1.png"
+              alt="Multiplayer Crossword Web-app"
+              description="Real-time collaborative crossword game with WebSockets and seamless cross-device play."
+              github="https://github.com/mohan-sys/mohans_crossword"
+              wrapperBg="#FFE7EB"
+            />
+            <h2>Multiplayer Crossword Web-app</h2>
           </div>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default AppShowcase;
