@@ -11,19 +11,18 @@ const AboutMe = ({ sectionRef }) => {
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">About Me</h2>
 
         <p className="about-text text-white/80 md:text-xl leading-relaxed mb-6">
-          Hi, I’m Mohan Raj Loganathan, a curious developer and problem solver. I’m currently a 
-          <span className="font-semibold"> Data Engineering Intern at StoryPointsAI</span>, where I work on 
-          ETL pipelines, cloud solutions, and preparing ML-ready datasets. Along the way, I’ve also built 
-          <span className="font-semibold"> full-stack applications</span> with Spring Boot, React, and Node.js 
-          from designing scalable APIs to crafting responsive frontends that actually feel good to use.
+          Hi, I’m Mohan Raj Loganathan, a graduate software engineer focused on cloud development and currently seeking{" "}
+          <span className="font-semibold">entry level roles</span>. I build backend systems and{" "}
+          <span className="font-semibold">REST APIs</span> that are reliable, secure, and easy to maintain. I have completed
+          internships where I shipped features, debugged production issues, and improved performance in real world applications.
         </p>
 
         <p className="about-text text-white/80 md:text-xl leading-relaxed">
-          I’m eager to grow into <span className="font-semibold">software and data engineering roles</span>, 
-          where I can bring together my love for backend systems, cloud platforms, and high-performance data pipelines. 
-          Some of the tools I reach for most often include Spring Boot, Hibernate, JUnit5, React, Next.js, Docker, AWS, 
-          GCP, Apache Spark and Postgres, but what excites me most is learning, experimenting, and pushing myself to 
-          build better systems every day.
+          I’m focused on <span className="font-semibold">cloud native application development</span> and scalable system design.
+          I enjoy event driven architectures, working with managed services, and automating delivery with{" "}
+          <span className="font-semibold">CI/CD</span>. I have built projects using serverless patterns and data pipelines across{" "}
+          <span className="font-semibold">AWS and GCP</span>, and I’m currently preparing for the{" "}
+          <span className="font-semibold">AWS Developer Associate</span>.
         </p>
       </div>
     </section>
