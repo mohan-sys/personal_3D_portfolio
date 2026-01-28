@@ -58,7 +58,7 @@ const Hero = () => {
         </header>
 
       
-        <figure>
+        {/* <figure>
           <div className="hero-photo md:h-[80vh] h-[60vh] w-full flex items-center justify-center">
             <img
               src="/images/mohan.png"          
@@ -67,7 +67,7 @@ const Hero = () => {
               style={{ aspectRatio: '1 / 1' }}
             />
           </div>
-        </figure>
+        </figure> */}
       </div>
     </section>
   );

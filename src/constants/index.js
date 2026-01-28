@@ -178,11 +178,11 @@ const expCards = [
     
     logoPath: "/images/logo1.png",
     title: "Data Engineering Intern",
-    date: "September 2025 - Present",
+    date: "September 2025 - October 2025",
     responsibilities: [
-      "Built and optimized ETL pipelines with Python, SQL, and Apache Spark, improving data ingestion speed and scalability.",
-      "Deployed GCP cloud solutions, reducing latency by 20% and boosting system resilience.",
-      "Delivered ML-ready datasets with data scientists, accelerating model training and business insights.",
+      "Processed 300K+ daily records by developing backend ETL pipelines using Python and GCP services, improving system data availability.",
+      "Reduced query response latency by 35% by optimising BigQuery patterns and transforming 150K+ transaction records.",
+      "Ensured 100% validation compliance by designing schema, null/duplicate, and referential checks before ingestion.",
     ],
   },
   {
