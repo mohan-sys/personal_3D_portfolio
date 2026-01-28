@@ -7,7 +7,7 @@ const AboutMe = ({ sectionRef }) => {
       ref={sectionRef}
       className="relative md:px-20 px-5 py-16 bg-black"
     >
-      <div className="max-w-4xl lg:max-w-1xl">
+      <div className="w-full max-w-none">
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-white">About Me</h2>
 
         <p className="about-text text-white/80 md:text-xl leading-relaxed mb-6">
